@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  quirino_landing:
+    build: .
+    ports:
+      - "1003:80"
+    restart: always
