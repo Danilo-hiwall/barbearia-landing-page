@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +12,8 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 
   <title>Quirino Barber - Sua barbearia!</title>
 </head>
@@ -25,7 +25,7 @@
       <nav class="header-content container">
         <div class="header-icons" data-aos="fade-down">
           <a href="https://www.instagram.com/quirinobarbeiro77/">
-           <i class="fa-brands fa-instagram fa-2x"></i>   
+            <i class="fa-brands fa-instagram fa-2x"></i>   
           </a>
         </div>
 
@@ -34,7 +34,7 @@
             data-aos="flip-up"
             data-aos-delay="300"
             data-aos-duration="1500"
-            src="assets/logo.svg" 
+            src="{% static 'assets/logo.svg' %}" 
             alt="Logo da barbearia"
           />
         </div>
@@ -44,7 +44,6 @@
             Agendar horário
           </a>
         </div>
-
       </nav>
 
       <main class="hero container" data-aos="fade-up" data-aos-delay="400">
@@ -60,7 +59,6 @@
       </main>
 
     </header>
-
   </div>
 
   <!-- ABOUT -->
@@ -68,7 +66,7 @@
     <div class="container about-content">
       <div data-aos="zoom-in" data-aos-delay="100">
         <img 
-          src="assets/images.svg" 
+          src="{% static 'assets/images.svg' %}" 
           alt="Imagem sobre a barbearia"
         />
       </div>
@@ -81,111 +79,78 @@
         <p>Na nossa barbearia, cada corte é pensado para valorizar seu estilo, realçar sua personalidade e te fazer sair daqui se sentindo confiante e renovado. Agende agora e viva essa experiência!</p>
         <p>Horário de funcionamento: <strong>09:00</strong> ás <strong>19:00</strong></p>
       </div>
-
     </div>
   </section>
 
   <!-- SERVICES -->
-
   <section class="services">
-
     <div class="services-content container">
       <h2>Serviços</h2>
       <p>Na nossa barbearia, cada serviço é pensado para oferecer mais do que apenas um corte ou uma barba bem feita — entregamos uma experiência completa, com atenção aos detalhes, produtos de qualidade e profissionais prontos para realçar seu estilo, sua identidade e sua confiança.</p>
     </div>
 
     <section class="haircuts">
-
       <div class="haircut" data-aos="fade-up" data-aos-delay="150">
-        <img
-          src="assets/quirino.jpg"
-          alt="Corte normal"
-        />
+        <img src="{% static 'assets/quirino.jpg' %}" alt="Corte normal" />
         <div class="haircut-info">
           <strong>Só máquina</strong>
-          <button>
-            R$ 15,00
-          </button>
+          <button>R$ 15,00</button>
         </div>
       </div>
 
       <div class="haircut" data-aos="fade-up" data-aos-delay="250">
-        <img
-          src="assets/quirino1.png"
-          alt="Barba completa"
-        />
+        <img src="{% static 'assets/quirino1.png' %}" alt="Barba completa" />
         <div class="haircut-info">
           <strong>Degradê</strong>
-          <button>
-            R$ 25,00
-          </button>
+          <button>R$ 25,00</button>
         </div>
       </div>
 
       <div class="haircut" data-aos="fade-up" data-aos-delay="400">
-        <img
-          src="assets/quirino11.png"
-          alt="Corte e barba"
-        />
+        <img src="{% static 'assets/quirino11.png' %}" alt="Corte e barba" />
         <div class="haircut-info">
           <strong>Social</strong>
-          <button>
-            R$ 20,00
-          </button>
+          <button>R$ 20,00</button>
         </div>
       </div>
-
     </section>
-
   </section>
 
   <!-- FOOTER -->
-
   <div class="services">
     <h2>Venha conhecer</h2>
   </div>
 
   <iframe
     width="100%"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15354.938627794712!2d-48.068909399999996!3d-15.922733050000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3348f5f5b98f%3A0x5e7a7e3d0e13a8df!2sQ%20802%20-%20Recanto%20das%20Emas%2C%20Bras%C3%ADlia%20-%20DF%2C%2072650-315!5e0!3m2!1spt-BR!2sbr!4v1717351363045!5m2!1spt-BR!2sbr">
-  </iframe>
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15354.938627794712!2d-48.068909399999996!3d-15.922733050000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3348f5f5b98f%3A0x5e7a7e3d0e13a8df!2sQ%20802%20-%20Recanto%20das%20Emas%2C%20Bras%C3%ADlia%20-%20DF%2C%2072650-315!5e0!3m2!1spt-BR!2sbr!4v1717351363045!5m2!1spt-BR!2sbr"
+  ></iframe>
 
   <footer class="footer">
     <div class="footer-icons">
-      <a href="#">
-        <i class="fa-brands fa-instagram fa-2x"></i>   
-       </a>
-       <a href="#">
-         <i class="fa-brands fa-facebook fa-2x"></i>   
-       </a>
-       <a href="#">
-         <i class="fa-brands fa-tiktok fa-2x"></i>   
-       </a>
+      <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+      <a href="#"><i class="fa-brands fa-tiktok fa-2x"></i></a>
     </div>
 
     <div>
-      <img 
-        src="assets/logo.svg" 
-        alt="Logo barbearia"
-      />
+      <img src="{% static 'assets/logo.svg' %}" alt="Logo barbearia" />
     </div>
 
     <p>Copyright 2025 | Quirino Barbearia - Todos direitos reservados.</p>
   </footer>
 
   <!-- Button Whatsapp -->
-
   <a 
-   href="https://api.whatsapp.com/send?phone=5561993114473&text=Quero%20fazer%20um%20agendamento%20hoje!"
-   class="btn-whatsapp"
-   target="_blank"
-   data-aos="zoom-in-up" data-aos-delay="400"
+    href="https://api.whatsapp.com/send?phone=5561993114473&text=Quero%20fazer%20um%20agendamento%20hoje!"
+    class="btn-whatsapp"
+    target="_blank"
+    data-aos="zoom-in-up" data-aos-delay="400"
   >
-    <img src="assets/whatssapp.svg" alt="Botao whatsapp" />
+    <img src="{% static 'assets/whatssapp.svg' %}" alt="Botao whatsapp" />
     <span class="tooltip-text">Agende seu horário</span>
   </a>
 
-
-  <script src="script.js"></script>
+  <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

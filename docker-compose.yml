@@ -1,8 +1,13 @@
-version: '3.8'
+version: '3.9'
 
 services:
-  quirino_landing:
-    build: .
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: barbearia_web
     ports:
-      - "1003:80"
+      - "9001:9001"
+    volumes:
+      - .:/app   # Mantém volume para desenvolvimento; cuidado com estrutura local
     restart: always
